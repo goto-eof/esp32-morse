@@ -1,5 +1,5 @@
 [package]
-name = "esp-32-morse"
+name = "esp32-morse-rust"
 version = "0.1.0"
 authors = ["Andrei Dodu"]
 edition = "2021"
