@@ -1,1 +1,1 @@
-pub mod morse_service;
+pub mod service;

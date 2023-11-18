@@ -2,8 +2,8 @@ use anyhow::Ok;
 use esp_idf_hal::delay::FreeRtos;
 use esp_idf_hal::gpio::*;
 use esp_idf_hal::peripherals::Peripherals;
-mod morse_service;
-use morse_service::translate;
+mod service;
+use service::morse_service::translate;
 fn main() -> anyhow::Result<()> {
     esp_idf_sys::link_patches();
 
@@ -22,7 +22,7 @@ fn main() -> anyhow::Result<()> {
             led.set_high()?;
             FreeRtos::delay_ms(morse_value);
             led.set_low()?;
-            FreeRtos::delay_ms(morse_service::SPACE_BETWEEN_CHARS);
+            FreeRtos::delay_ms(service::morse_service::SPACE_BETWEEN_CHARS);
         }
     }
 }
