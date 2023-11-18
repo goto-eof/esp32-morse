@@ -7,7 +7,7 @@ Led blinking using morse encoding for ESP32 device, implemented using Rust progr
 ```
 rustup update
 
-apt-get install -y git curl gcc clang ninja-build cmake libudev-dev unzip xz-utils python3 python3-pip python3-venv libusb-1.0-0 libssl-dev pkg-config libpython2.7
+apt-get install -y git curl gcc clang ninja-build cmake libudev-dev unzip xz-utils python3 python3-pip python3-venv libusb-1.0-0 libssl-dev pkg-config
 
 git clone https://github.com/esp-rs/rust-build.git
 cd rust-build
