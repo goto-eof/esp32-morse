@@ -7,7 +7,7 @@ const PAUSE: u32 = 500;
 const END: u32 = 2000;
 
 pub fn translate(string: &str) -> Result<Vec<u32>, String> {
-    let translation = retrieve_translation();
+    let translation = retrieve_translation_map();
 
     let mut morse_result: Vec<u32> = Vec::new();
     for character in string.to_uppercase().chars() {
@@ -27,7 +27,7 @@ pub fn translate(string: &str) -> Result<Vec<u32>, String> {
     return Ok(morse_result);
 }
 
-fn retrieve_translation() -> HashMap<char, Vec<u32>> {
+fn retrieve_translation_map() -> HashMap<char, Vec<u32>> {
     let translation: HashMap<char, Vec<u32>> = HashMap::from([
         ('A', vec![SHORT, LONG]),
         ('B', vec![LONG, SHORT, SHORT, SHORT]),
