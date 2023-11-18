@@ -1,0 +1,12 @@
+[package]
+name = "tst"
+version = "0.1.0"
+authors = ["Andrei Dodu"]
+
+[dependencies]
+morse_service = { path = "../morse_lib" }
+
+
+[lib]
+name = "tests"
+path = "src/lib.rs"
