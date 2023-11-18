@@ -4,8 +4,7 @@ version = "0.1.0"
 authors = ["Andrei Dodu"]
 
 [dependencies]
-morse_service = {path = "../morse_service"}
-
+morse_service = { path = "../morse_lib" }
 
 
 [lib]
