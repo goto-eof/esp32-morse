@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub const SPACE_BETWEEN_CHARS: u32 = 50;
+pub const PAUSE_BETWEEN_MORSE_SIGNALS: u32 = 50;
 const SHORT: u32 = 100;
 const LONG: u32 = 300;
 const PAUSE: u32 = 500;
@@ -28,7 +28,7 @@ pub fn translate(string: &str) -> Result<Vec<u32>, String> {
 }
 
 fn retrieve_translation_map() -> HashMap<char, Vec<u32>> {
-    let translation: HashMap<char, Vec<u32>> = HashMap::from([
+    HashMap::from([
         ('A', vec![SHORT, LONG]),
         ('B', vec![LONG, SHORT, SHORT, SHORT]),
         ('C', vec![LONG, SHORT, LONG, SHORT]),
@@ -66,6 +66,5 @@ fn retrieve_translation_map() -> HashMap<char, Vec<u32>> {
         ('9', vec![LONG, LONG, LONG, LONG, SHORT]),
         ('0', vec![LONG, LONG, LONG, LONG, LONG]),
         (' ', vec![PAUSE, PAUSE]),
-    ]);
-    translation
+    ])
 }
