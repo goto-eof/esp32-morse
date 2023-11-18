@@ -19,14 +19,14 @@ jobs:
       fail-fast: false
       matrix:
         action:
+          - command: test
+            args: --manifest-path ./morse_test/Cargo.toml
           - command: build
             args: --config ./morse_esp32/.cargo/config.toml --release --manifest-path ./morse_esp32/Cargo.toml
           - command: fmt
             args: --all --manifest-path ./morse_esp32/Cargo.toml -- --check --color always
           - command: clippy
             args: --config ./morse_esp32/.cargo/config.toml --all-targets --all-features --workspace  --manifest-path ./morse_esp32/Cargo.toml  -- -D warnings
-          - command: test
-            args: --manifest-path ./morse_test/Cargo.toml
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
