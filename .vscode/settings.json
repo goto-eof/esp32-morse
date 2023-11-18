@@ -1,8 +1,8 @@
 {
   "workbench.colorCustomizations": {
     "editorUnnecessaryCode.border": "#d55151",
-    "activityBar.background": "#4A1D3E",
-    "titleBar.activeBackground": "#672956",
+    "activityBar.background": "#1d4a1f",
+    "titleBar.activeBackground": "#296740",
     "titleBar.activeForeground": "#FCF9FB"
   },
   "rust-analyzer.linkedProjects": [
