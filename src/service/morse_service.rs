@@ -24,7 +24,7 @@ pub fn translate(string: &str) -> Result<Vec<u32>, String> {
         morse_result.append(&mut vec![PAUSE])
     }
     morse_result.append(&mut vec![END]);
-    return Ok(morse_result);
+    Ok(morse_result)
 }
 
 fn retrieve_translation_map() -> HashMap<char, Vec<u32>> {
