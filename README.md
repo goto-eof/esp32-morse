@@ -2,8 +2,18 @@
 
 Led blinking using morse encoding for ESP32 device.
 
-**esp32_morse_main** - contains the ESP32 application
+**morse_esp32** - contains the ESP32 application
 
-**morse_lib** - contains the morse encoder
+```
+cd morse_esp32
+cargo build
+```
+
+**morse_lib** - contains the morse encoder, used by `morse_esp32` and `morse_test`.
 
 **morse_test** - test cases for morse_lib
+
+```
+cd morse_test
+cargo test
+```
