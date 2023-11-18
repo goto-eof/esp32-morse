@@ -4,7 +4,7 @@ pub const SPACE_BETWEEN_CHARS: u32 = 50;
 const SHORT: u32 = 100;
 const LONG: u32 = 300;
 const PAUSE: u32 = 500;
-const END: u32 = 1000;
+const END: u32 = 2000;
 
 pub fn translate(string: &str) -> Result<Vec<u32>, String> {
     let translation = retrieve_translation();
