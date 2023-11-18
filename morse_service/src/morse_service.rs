@@ -1,10 +1,10 @@
 use std::collections::HashMap;
 
 pub const PAUSE_BETWEEN_MORSE_SIGNALS: u32 = 50;
-const SHORT: u32 = 100;
-const LONG: u32 = 300;
-const PAUSE: u32 = 500;
-const END: u32 = 2000;
+pub const SHORT: u32 = 100;
+pub const LONG: u32 = 300;
+pub const PAUSE: u32 = 500;
+pub const END: u32 = 2000;
 
 pub fn translate(string: &str) -> Result<Vec<u32>, String> {
     let translation = retrieve_translation_map();
@@ -27,7 +27,7 @@ pub fn translate(string: &str) -> Result<Vec<u32>, String> {
     Ok(morse_result)
 }
 
-fn retrieve_translation_map() -> HashMap<char, Vec<u32>> {
+pub fn retrieve_translation_map() -> HashMap<char, Vec<u32>> {
     HashMap::from([
         ('A', vec![SHORT, LONG]),
         ('B', vec![LONG, SHORT, SHORT, SHORT]),

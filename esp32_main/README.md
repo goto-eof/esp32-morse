@@ -20,6 +20,8 @@ cargo install espup
 espup install
 . $HOME/export-esp.sh
 
+cargo install espflash
+
 ```
 
 ### Build the project

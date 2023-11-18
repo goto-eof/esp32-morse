@@ -1,0 +1,9 @@
+[package]
+name = "morse_service"
+version = "0.1.0"
+edition = "2021"
+
+
+[lib]
+name = "morse_service"
+path = "src/lib.rs"
