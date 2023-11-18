@@ -29,7 +29,7 @@ fn main() -> anyhow::Result<()> {
     }
 }
 
-fn print_message(morse: &Vec<u32>) {
+fn print_message(morse: &[u32]) {
     println!("Sending: {}", MESSAGE);
     println!("Translated ");
     for morse_value in morse.iter().copied() {
