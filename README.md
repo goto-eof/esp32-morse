@@ -35,11 +35,3 @@ cargo espflash flash <SERIAL>
 ```
 
 For more configuration information click [here](https://github.com/esp-rs/rust-build).
-
-### New project
-
-```
-cargo install cargo-generate
-
-cargo generate esp-rs/esp-idf-template cargo
-```
