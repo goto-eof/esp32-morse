@@ -20,9 +20,9 @@ jobs:
       matrix:
         action:
           - command: build
-            args: --release  --manifest-path ./esp32_morse_main/Cargo.toml
+            args: --release --manifest-path ./esp32_morse_main/Cargo.toml
           - command: fmt
-            args: --all  --manifest-path ./esp32_morse_main/Cargo.toml -- --check --color always
+            args: --all --manifest-path ./esp32_morse_main/Cargo.toml -- --check --color always
           - command: clippy
             args: --all-targets --all-features --workspace  --manifest-path ./esp32_morse_main/Cargo.toml  -- -D warnings
     steps:
