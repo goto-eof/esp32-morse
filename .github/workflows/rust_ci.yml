@@ -20,11 +20,11 @@ jobs:
       matrix:
         action:
           - command: build
-            args: --release --manifest-path ./esp32_morse_main/Cargo.toml
+            args: --config ./esp32_morse_main/.cargo/config.toml --release --manifest-path ./esp32_morse_main/Cargo.toml
           - command: fmt
             args: --all --manifest-path ./esp32_morse_main/Cargo.toml -- --check --color always
           - command: clippy
-            args: --all-targets --all-features --workspace  --manifest-path ./esp32_morse_main/Cargo.toml  -- -D warnings
+            args: --config ./esp32_morse_main/.cargo/config.toml --all-targets --all-features --workspace  --manifest-path ./esp32_morse_main/Cargo.toml  -- -D warnings
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
