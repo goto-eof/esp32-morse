@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 
+pub const SPACE_BETWEEN_CHARS: u32 = 50;
 const SHORT: u32 = 100;
 const LONG: u32 = 300;
 const PAUSE: u32 = 500;

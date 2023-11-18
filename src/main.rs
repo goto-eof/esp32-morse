@@ -22,6 +22,7 @@ fn main() -> anyhow::Result<()> {
             led.set_high()?;
             FreeRtos::delay_ms(morse_value);
             led.set_low()?;
+            FreeRtos::delay_ms(morse_service::SPACE_BETWEEN_CHARS);
         }
     }
 }
