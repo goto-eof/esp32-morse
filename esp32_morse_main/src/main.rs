@@ -32,7 +32,7 @@ fn main() -> anyhow::Result<()> {
 fn print_message(morse: &Vec<u32>) {
     println!("Sending: {}", MESSAGE);
     println!("Translated ");
-    for morse_value in morse.to_owned().clone() {
+    for morse_value in morse.to_owned() {
         if morse_value == SHORT {
             print!(".")
         } else if morse_value == LONG {
