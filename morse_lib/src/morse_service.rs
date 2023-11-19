@@ -1,10 +1,10 @@
 use std::collections::HashMap;
-
-pub const PAUSE_BETWEEN_MORSE_SIGNALS: u32 = 50;
-pub const SHORT: u32 = 100;
-pub const LONG: u32 = 300;
-pub const PAUSE: u32 = 500;
-pub const END: u32 = 2000;
+pub const K: u32 = 150;
+pub const PAUSE_BETWEEN_MORSE_SIGNALS: u32 = 50 + K;
+pub const SHORT: u32 = 100 + K;
+pub const LONG: u32 = 300 + K;
+pub const PAUSE: u32 = 500 + K;
+pub const END: u32 = 2000 + K;
 
 pub fn translate(string: &str) -> Result<Vec<u32>, String> {
     let translation = retrieve_translation_map();
