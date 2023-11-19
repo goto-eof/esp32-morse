@@ -14,7 +14,6 @@ mod tests {
         let mut correct_vec = map.get(&'A').unwrap().to_owned();
         let end_values = &mut vec![PAUSE, END];
         correct_vec.append(end_values);
-        // println!("{:?} {:?}", a, &correct_vec);
         assert_eq!(vec_compare(&correct_vec, &a.unwrap()), true);
     }
 
