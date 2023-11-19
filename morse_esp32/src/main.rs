@@ -4,7 +4,7 @@ use esp_idf_hal::gpio::*;
 use esp_idf_hal::peripherals::Peripherals;
 use morse_service::morse_service::{translate, LONG, PAUSE, PAUSE_BETWEEN_MORSE_SIGNALS, SHORT};
 
-const MESSAGE: &str = "Hello World";
+const MESSAGE: &str = "Hello World!";
 
 fn main() -> anyhow::Result<()> {
     esp_idf_sys::link_patches();

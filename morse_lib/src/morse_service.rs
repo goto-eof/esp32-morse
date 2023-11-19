@@ -8,16 +8,11 @@ pub const END: u32 = 2000 + K;
 
 pub fn translate(string: &str) -> Result<Vec<u32>, String> {
     let translation = retrieve_translation_map();
-
     let mut morse_result: Vec<u32> = Vec::new();
     for character in string.to_uppercase().chars() {
         let morse_character_result = translation.get(&character);
-        if morse_character_result.is_none() {
-            let err_message = format!(
-                "Invalid character: could not translate the character: {}",
-                character
-            );
-            return Err(err_message);
+        if let Some(value) = validate(morse_character_result, character) {
+            return value;
         }
         let morse = &mut morse_character_result.unwrap().to_owned();
         morse_result.append(morse);
@@ -25,6 +20,20 @@ pub fn translate(string: &str) -> Result<Vec<u32>, String> {
     }
     morse_result.append(&mut vec![END]);
     Ok(morse_result)
+}
+
+fn validate(
+    morse_character_result: Option<&Vec<u32>>,
+    character: char,
+) -> Option<Result<Vec<u32>, String>> {
+    if morse_character_result.is_none() {
+        let err_message = format!(
+            "Invalid character: could not translate the character: {}",
+            character
+        );
+        return Some(Err(err_message));
+    }
+    None
 }
 
 pub fn retrieve_translation_map() -> HashMap<char, Vec<u32>> {
