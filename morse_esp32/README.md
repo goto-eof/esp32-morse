@@ -30,10 +30,10 @@ cargo install espflash
 cargo build
 ```
 
-### Build and flash
-
+### Install and Run the project
+Remember to hold the power button in order to install the project.
 ```
-cargo espflash flash <SERIAL>
+cargo run 
 ```
 
 For more configuration information click [here](https://github.com/esp-rs/rust-build).
