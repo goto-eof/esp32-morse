@@ -6,7 +6,7 @@ Led blinking using morse encoding for ESP32 device.
 
 ```
 cd morse_esp32
-cargo build
+cargo run # remember that your ESP32 should be connected and the power button should be pressed in roder to install software
 ```
 
 **morse_lib** - contains the morse encoder, used by `morse_esp32` and `morse_test`.
